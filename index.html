@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
+    <title>StegoText</title>
+    <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/grids-responsive-min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+<div class="header"><h2>Data Compression and Cryptology</h2></div>
+<div class="pure-g">
+    <div class="pure-u-1 pure-u-md-1-2 content">
+        <h3>HIDE</h3>
+        <form class="pure-form pure-form-aligned">
+            <fieldset class="pure-group">
+                <h5>Number of spaces in message should be greater than <br> <span>2x(secret message character count)+4</span></h5>
+                <textarea class="pure-input-1" id="textbox" placeholder="Enter your public message here"></textarea>
+            </fieldset>
+            <fieldset class="pure-group">
+                <textarea class="pure-input-1" id="textboxsecret" placeholder="Enter your secret message here, w, x and numbers are not supported"></textarea>
+                <p id="spacecounter"></p>
+            </fieldset>
+
+        </form>
+        <button class="pure-button pure-input-1-2 pure-button-primary" id="create">Make txt file</button>
+        <!--<a download="info.txt" id="downloadlink" style="display: none">Download</a>-->
+        <a download="info.txt" class="pure-button pure-input-1-2 pure-button-primary" id="downloadlink" style="display: none">Download</a>
+    </div>
+    <div class="pure-u-1 pure-u-md-1-2 content">
+        <h3>REVEAL</h3>
+        <label class="fileContainer pure-button pure-button-primary">
+            Browse...
+            <input type="file" id="fileInput"/>
+        </label>
+        <pre id="fileDisplayArea"></pre>
+
+    </div>
+
+</div>
+</body>
+<script src="js/diacritics.js"></script>
+<script src="js/engine.js"></script>
+</html>
